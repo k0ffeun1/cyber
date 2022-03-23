@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Exo";
   src: url(../fonts/Exo2-Regular.otf);
@@ -17,11 +18,17 @@ body {
 .cyber {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow-x: none;
+  overflow-x: hidden;
   margin: 0;
   font-family: "Exo", sans-serif;
   margin-left: 185px;
   background-color: #00061b;
+}
+
+@media (max-width: 1023px) {
+  .cyber {
+    margin-left: 0;
+  }
 }
 
 .container {
@@ -30,12 +37,31 @@ body {
   padding: 0 15px;
 }
 
+@media (max-width: 1440px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
 .text {
   font-family: "Exo", sans-serif;
   font-size: 28px;
   line-height: 34px;
   color: #fff;
   font-weight: 400;
+}
+
+@media (max-width: 1440px) {
+  .text {
+    font-size: 24px;
+    line-height: 30px;
+  }
 }
 
 .title {
@@ -94,11 +120,6 @@ body {
           align-items: center;
 }
 
-.tasks__title-img {
-  width: 40%;
-  margin-bottom: 60px;
-}
-
 .desicion {
   margin-bottom: 120px;
 }
@@ -114,11 +135,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.desicion__title-img {
-  width: 18%;
-  margin-bottom: 60px;
 }
 
 .animatic {
@@ -138,7 +154,7 @@ body {
 }
 
 .animatic__content1 {
-  border: 7px solid #48D7F6;
+  border: 7px solid #48d7f6;
   border-left: none;
   border-top-right-radius: 54px;
   border-bottom-right-radius: 54px;
@@ -153,7 +169,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #00061B;
+  background-color: #00061b;
   position: relative;
   z-index: 5;
 }
@@ -202,8 +218,8 @@ body {
 .integration__content2 {
   position: relative;
   z-index: 5;
-  background-color: #00061B;
-  border: 7px solid #FF238B;
+  background-color: #00061b;
+  border: 7px solid #ff238b;
   border-right: none;
   border-top-left-radius: 54px;
   border-bottom-left-radius: 54px;
@@ -222,6 +238,7 @@ body {
 
 .integration__list {
   width: 100%;
+  margin-bottom: 40px;
 }
 
 .integration__list-text {
@@ -231,7 +248,7 @@ body {
 }
 
 .integration__list-text::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 10px;
   height: 10px;
@@ -239,6 +256,39 @@ body {
   border-radius: 50%;
   left: 15px;
   top: 15px;
+}
+
+@media (max-width: 1440px) {
+  .animatic__content1 {
+    padding: 60px 30px;
+  }
+  .integration__img {
+    left: -25%;
+    top: -3%;
+  }
+  .integration__content2 {
+    padding: 60px 30px;
+  }
+  .video1, .video2 {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media (max-width: 1340px) {
+  .animatic__content, .integration__content {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+  }
+  .animatic__content1, .integration__content2 {
+    width: 60%;
+  }
+  .animatic__content2, .integration__content1 {
+    width: 40%;
+  }
+  .integration__img {
+    left: -50%;
+  }
 }
 
 .result {
@@ -264,6 +314,21 @@ body {
 
 .result__graphic {
   margin-bottom: 60px;
+  width: 100%;
+}
+
+.result__graphic-img {
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+@media (max-width: 1440px) {
+  .result__graphic {
+    overflow-x: scroll;
+  }
+  .result__graphic-img {
+    width: auto;
+  }
 }
 
 .result__list-text {
@@ -273,7 +338,7 @@ body {
 }
 
 .result__list-text::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 10px;
   height: 10px;
@@ -288,7 +353,7 @@ body {
 }
 
 .title1 {
-  color: #FF238B;
+  color: #ff238b;
   font-size: 36px;
   font-weight: 700;
   line-height: 43px;
@@ -296,7 +361,7 @@ body {
 }
 
 .subtitle {
-  color: #FF238B;
+  color: #ff238b;
   font-size: 32px;
   font-weight: 400;
   line-height: 38px;
@@ -333,6 +398,7 @@ body {
 .footer {
   background-image: url(../images/footer/footer__bg.png);
   background-size: cover;
+  padding-bottom: 40%;
 }
 
 .footer__inner {
@@ -350,6 +416,7 @@ body {
 
 .footer__text {
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .team {
@@ -367,7 +434,7 @@ body {
   max-width: 372px;
   max-height: 120px;
   background-color: #99175e;
-  border: 10px solid #ea2180;
+  border: 7px solid #ea2180;
   border-radius: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -379,6 +446,7 @@ body {
       flex-basis: 30%;
   margin-right: 20px;
   margin-bottom: 40px;
+  opacity: 0.92;
 }
 
 .team__item-img {
@@ -399,4 +467,59 @@ body {
   font-size: 16px;
   line-height: 21px;
   font-weight: 400;
+}
+
+.team__bottom {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.team__item-bottom {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  background-color: #3386a4;
+  border: 7px solid #44cdeb;
+  opacity: 0.92;
+}
+
+/* полоса прокрутки (скроллбар) */
+::-webkit-scrollbar {
+  width: 14px;
+  /* ширина для вертикального скролла */
+  height: 8px;
+  /* высота для горизонтального скролла */
+  background-color: #143861;
+}
+
+/* ползунок скроллбара */
+::-webkit-scrollbar-thumb {
+  background-color: #843465;
+  border-radius: 9em;
+  -webkit-box-shadow: inset 1px 1px 10px #f3faf7;
+          box-shadow: inset 1px 1px 10px #f3faf7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #253861;
+}
+
+/* Стрелки */
+::-webkit-scrollbar-button:vertical:start:decrement {
+  background: linear-gradient(120deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(240deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(0deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #f6f8f4;
+}
+
+::-webkit-scrollbar-button:vertical:end:increment {
+  background: linear-gradient(300deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(60deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(180deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #f6f8f4;
+}
+
+::-webkit-scrollbar-button:horizontal:start:decrement {
+  background: linear-gradient(30deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(150deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(270deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #f6f8f4;
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment {
+  background: linear-gradient(210deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(330deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(90deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #f6f8f4;
 }
