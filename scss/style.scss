@@ -11,6 +11,7 @@
 
 //==================================MAIN-STYLES===================================================
 
+
 body {
     margin: 0;
 }
@@ -43,34 +44,84 @@ body {
         max-width: 100%;
     }
 }
+.title {
+    margin-bottom: 60px;
+    color: white;
+    font-size: 50px;
+    font-size: calc(35px + (50 - 35) * ((100vw - 320px) / (1920 - 320)));
+    line-height: 115%;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
+    text-shadow: 
+    -3px 2px 0px #05B411,
+    -5px 1px 0px #0D1AC7,
+    2px -1px 0px #B80510;
+    letter-spacing: 0.05em;
+}
+@media (min-width: 2560px) {
+
+}
+.title1 {
+    color: #ff238b;
+    font-size: calc(25px + (36 - 25) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(30px + (43 - 30) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 700;
+    margin: 0;
+}
+@media (min-width: 2560px) {
+    .title1 {
+        font-size: calc(34px + (55 - 34) * ((100vw - 320px) / (1920 - 320)));
+        line-height: calc(33px + (70 - 33) * ((100vw - 320px) / (1920 - 320)));
+    }
+}
+.subtitle {
+    color: #ff238b;
+    font-size: calc(23px + (32 - 23) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(30px + (38 - 30) * ((100vw - 320px) / (1920 - 320)));
+    font-weight: 400;
+    margin: 0;  
+    margin-bottom: 40px;
+}
+@media (min-width: 2560px) {
+    .subtitle {
+        font-size: calc(34px + (47 - 34) * ((100vw - 320px) / (1920 - 320)));
+        line-height: calc(33px + (60 - 33) * ((100vw - 320px) / (1920 - 320)));
+    }
+}
 .text {
     font-family: "Exo", sans-serif;
-    font-size: 28px;
+    font-size: calc(20px + (28 - 20) * ((100vw - 320px) / (1920 - 320)));
     line-height: 34px;
     color: #fff;
     font-weight: 400;
 }
-@media (max-width: 1440px) {
+@media (min-width: 2560px) {
     .text {
-        font-size: 24px;
-        line-height: 30px;
+        font-size: calc(20px + (35 - 20) * ((100vw - 320px) / (1920 - 320)));
+        line-height: calc(20px + (45 - 20) * ((100vw - 320px) / (1920 - 320)));
     }
-}
-.title {
-    margin-bottom: 60px;
 }
 .purple {
     font-weight: 700;
     font-size: 32px;
+    font-size: calc(22px + (32 - 22) * ((100vw - 320px) / (1920 - 320)));
     line-height: 38px;
     font-family: "Exo", sans-serif;
     color: #ff238b;
+}
+@media (min-width: 2560px) {
+    .purple {
+        font-size: calc(20px + (38 - 20) * ((100vw - 320px) / (1920 - 320)));
+        line-height: calc(20px + (50 - 20) * ((100vw - 320px) / (1920 - 320)));
+    }
 }
 .blue {
     color: #48d7f6;
 }
 .header {
 }
+
 .header__bg {
     object-fit: cover;
     width: 100%;
@@ -86,8 +137,8 @@ body {
 .center {
     background: radial-gradient(
         50% 50% at 50% 50%,
-        rgba(0, 6, 27, 0) 0%,
-        rgba(0, 6, 27, 0.395833) 39.58%,
+        rgba(#22447E, 1) 0%,
+        rgba(10, 22, 66, 1) 39.58%,
         #00061b 100%
     );
     padding-bottom: 120px;
@@ -115,6 +166,10 @@ body {
 }
 .desicion__title-img {
 }
+.header__proba {
+
+}
+
 .desicion__text {
 }
 .animatic {
@@ -142,9 +197,10 @@ body {
 .animatic__title-img {
 }
 .animatic__text {
-    max-width: 868px;
 }
-.video1 {
+.video1,
+.video2 {
+    width: 80%;
 }
 .animatic__content2 {
     position: relative;
@@ -155,7 +211,6 @@ body {
     right: 0;
     top: 0;
 }
-
 
 .integration {
     display: flex;
@@ -223,19 +278,23 @@ body {
     .integration__content2 {
         padding: 60px 30px;
     }
-    .video1, .video2 {
+    .video1,
+    .video2 {
         width: 80%;
         height: auto;
     }
 }
 @media (max-width: 1340px) {
-    .animatic__content, .integration__content {
+    .animatic__content,
+    .integration__content {
         flex-basis: auto;
     }
-    .animatic__content1, .integration__content2 {
+    .animatic__content1,
+    .integration__content2 {
         width: 60%;
     }
-    .animatic__content2, .integration__content1 {
+    .animatic__content2,
+    .integration__content1 {
         width: 40%;
     }
     .integration__img {
@@ -304,21 +363,6 @@ body {
 }
 .nectarin__title-img {
 }
-.title1 {
-    color: #ff238b;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 43px;
-    margin: 0;
-}
-.subtitle {
-    color: #ff238b;
-    font-size: 32px;
-    font-weight: 400;
-    line-height: 38px;
-    margin: 0;
-    margin-bottom: 40px;
-}
 .nectarin__text {
 }
 .opinion__bg {
@@ -333,9 +377,8 @@ body {
     flex-direction: column;
     align-items: flex-end;
 }
-.client__title-img {
-}
 .client__title {
+    text-align: right;
 }
 .client__subtitle {
 }
@@ -346,7 +389,8 @@ body {
 .footer {
     background-image: url(../images/footer/footer__bg.png);
     background-size: cover;
-    padding-bottom: 40%;
+    background-position-x: center;
+    padding-bottom: 50%;
 }
 .footer__inner {
     display: flex;
